@@ -109,7 +109,7 @@ const Header = () => {
         </DrawerRoot>
 
         <div className="text-4xl lato-bold max-lg:text-3xl max-sm:-ml-4">
-          <Link to={"/user"}>SHOP.CO</Link>
+          <Link to={"/"}>SHOP.CO</Link>
         </div>
       </div>
 
