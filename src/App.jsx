@@ -23,7 +23,7 @@ const App = () => {
       color={useColorModeValue("gray.100", "gray.900")}
       overflowY={"hidden"}
     >
-      {["/user", "/product", "/Showcase", "/details", "/Cart"].includes(
+      {["/", "/product", "/Showcase", "/details", "/Cart"].includes(
         useLocation().pathname
       ) && <Header />}
       {["/login", "/register"].includes(useLocation().pathname) && <Navbar />}
