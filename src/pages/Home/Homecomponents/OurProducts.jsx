@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 
 import { Button } from "@chakra-ui/react";
 import ProductCard from "./ProductCard";
+import { Link } from "react-router-dom";
 
 const OurProducts = () => {
   const { fetchProducts, products } = useProducts();
@@ -27,9 +28,11 @@ const OurProducts = () => {
           />
         ))}
       </div>
-      <button className="border border-gray-500 rounded-2xl px-2 py-1 text-xl w-[25vw] self-center">
-        View All
-      </button>
+      <Link to={"/Showcase"} state={{ style: "FORMAL" }}>
+        <button className="border border-gray-500 rounded-2xl px-2 py-1 text-xl w-[25vw] self-center">
+          View All
+        </button>
+      </Link>
     </div>
   );
 };

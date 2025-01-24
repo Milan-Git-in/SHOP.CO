@@ -26,45 +26,52 @@ const BrowsebyStyle = () => {
                   className="max-sm:h-[23vh] max-sm:min-w-full rounded-xl h-[320px]"
                 />
                 <p className="absolute top-5 left-[5%] text-2xl BoldDigit text-black">
-                  Casaul
+                  Casual
                 </p>
               </Link>
             </div>
           </div>
           <div className=" p-5 col-span-2 rounded-xl">
             <div className="relative">
-              <img
-                src="./Formal.png"
-                alt="Formal"
-                className="max-sm:h-[23vh] min-w-full rounded-xl max-md:h-[320px] md:h-[320px] "
-              />
-              <p className="absolute top-5 left-[5%] text-2xl BoldDigit text-black">
-                Formal
-              </p>
+              <Link to={"/Showcase"} state={{ style: "FORMAL" }}>
+                <img
+                  src="./Formal.png"
+                  alt="Formal"
+                  className="max-sm:h-[23vh] min-w-full rounded-xl max-md:h-[320px] md:h-[320px] "
+                />
+                <p className="absolute top-5 left-[5%] text-2xl BoldDigit text-black">
+                  Formal
+                </p>
+              </Link>
             </div>
           </div>
           <div className=" p-5 col-span-2 rounded-xl">
             <div className="relative">
-              <img
-                src="./Party.png"
-                alt="Party"
-                className="max-sm:h-[23vh] min-w-full rounded-xl md:h-[320px] max-md:h-[320px]"
-              />
-              <p className="absolute top-5 left-[5%] text-2xl BoldDigit text-black">
-                Party
-              </p>
+              {" "}
+              <Link to={"/Showcase"} state={{ style: "PARTY" }}>
+                <img
+                  src="./Party.png"
+                  alt="Party"
+                  className="max-sm:h-[23vh] min-w-full rounded-xl md:h-[320px] max-md:h-[320px]"
+                />
+                <p className="absolute top-5 left-[5%] text-2xl BoldDigit text-black">
+                  Party
+                </p>
+              </Link>
             </div>
           </div>
           <div className=" p-5 col-span-1 rounded-xl">
             <div className="relative">
-              <img
-                src="./Gym.png"
-                alt="Gym"
-                className=" max-sm:min-w-full rounded-xl max-sm:h-[23vh] h-[345px]"
-              />
-              <p className="absolute top-5 left-[5%] text-2xl BoldDigit text-black">
-                Gym
-              </p>
+              <Link to={"/Showcase"} state={{ style: "GYM" }}>
+                <img
+                  src="./Gym.png"
+                  alt="Gym"
+                  className=" max-sm:min-w-full rounded-xl max-sm:h-[23vh] h-[345px]"
+                />
+                <p className="absolute top-5 left-[5%] text-2xl BoldDigit text-black">
+                  Gym
+                </p>
+              </Link>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import ProductCard from "./ProductCard";
 import { Button } from "@chakra-ui/react";
 import { useColorModeValue } from "@/components/ui/color-mode";
+import { Link } from "react-router-dom";
 
 const NewArrivals = () => {
   const { fetchProducts, products } = useProducts();
@@ -27,9 +28,11 @@ const NewArrivals = () => {
           />
         ))}
       </div>
-      <button className="border border-gray-500 rounded-2xl px-2 py-1 text-xl w-[25vw] self-center">
-        View All
-      </button>
+      <Link to={"/Showcase"} state={{ style: "CASUAL" }}>
+        <button className="border border-gray-500 rounded-2xl px-2 py-1 text-xl w-[25vw] self-center">
+          View All
+        </button>
+      </Link>
       <hr
         className={`w-[80vw] opacity-50 self-center ${useColorModeValue(
           "border-white ",
