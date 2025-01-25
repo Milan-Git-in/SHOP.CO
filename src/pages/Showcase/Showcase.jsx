@@ -24,6 +24,7 @@ import {
 import { BiRightArrow } from "react-icons/bi";
 import { FaFilter } from "react-icons/fa";
 import { Slider } from "@/components/ui/slider";
+import { FcClearFilters } from "react-icons/fc";
 
 const Showcase = () => {
   const location = useLocation();
@@ -41,6 +42,11 @@ const Showcase = () => {
 
   const PRODUCTS_PER_PAGE = 9;
   // Filter products by style (initial filter)
+
+  const handleClearFilters = () => {
+    setFilteredProducts(products.filter((product) => product.style === style));
+  };
+
   const productsByStyle = useMemo(
     () => products.filter((product) => product.style === style),
     [products, style]
@@ -86,7 +92,7 @@ const Showcase = () => {
 
   return (
     <div className="flex gap-2">
-      <div className="w-1/3 max-w-[300px] mt-[100px] max-lg:hidden border max-h-[740px] rounded-2xl p-5">
+      <div className="w-1/3 max-w-[300px] mt-[100px] max-lg:hidden border max-h-[840px] rounded-2xl p-5">
         <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center">
@@ -209,6 +215,13 @@ const Showcase = () => {
                   </div>
                 </Link>
               </div>
+            </div>
+            <div className="mt-[33px]">
+              <hr />
+            </div>
+            <div className="flex justify-between">
+              <p>Clear all Filters</p>
+              <FcClearFilters onClick={handleClearFilters} />
             </div>
           </div>
         </div>
@@ -356,6 +369,13 @@ const Showcase = () => {
                             <BiRightArrow />
                           </div>
                         </Link>
+                      </div>
+                      <div className="my-5">
+                        <hr />
+                      </div>
+                      <div className="flex justify-between text-xl">
+                        <p>Clear all Filters</p>
+                        <FcClearFilters onClick={handleClearFilters} />
                       </div>
                     </div>
                   </div>

@@ -9,7 +9,7 @@ const Card = ({ product }) => {
   const { addMore, removeFromCart } = useCart();
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between max-sm:flex-col">
       <div className="flex gap-2">
         <div>
           <img
@@ -18,35 +18,36 @@ const Card = ({ product }) => {
             className="w-[300px] h-[200px] rounded-xl"
           />
         </div>
+      </div>
+      <div className="flex justify-between w-2/3 max-sm:w-full">
         <div className="flex flex-col gap-1">
           <div className="flex flex-col gap-2 self-center  mt-[50%]">
             <p className="text-xl lato-bold ml-2">{product.name}</p>
             <p className="BoldDigit text-xl">$ {product.price}</p>
           </div>
         </div>
-      </div>
-
-      <div className="flex flex-col gap-5 justify-between  ">
-        <div className="text-2xl self-end text-red-500">
-          <MdDelete
-            onClick={() => removeFromCart(product.product_id, product.count)}
-          />
-        </div>
-        <div
-          className={`${useColorModeValue(
-            "bg-black",
-            "bg-gray-300"
-          )} ${useColorModeValue(
-            "text-white",
-            "text-black"
-          )}  w-[100px] mb-[40px] justify-between p-2 rounded-3xl flex items-center`}
-        >
-          {/* Counter */}
-          <FaMinus onClick={() => removeFromCart(product.product_id, 1)} />
-          <p className="text-xl mx-2 pointer-events-none select-none">
-            {product.count}
-          </p>
-          <FiPlus onClick={() => addMore(product.product_id)} />
+        <div className="flex flex-col gap-5 justify-between  ">
+          <div className="text-2xl self-end text-red-500 max-sm:mt-[50%]">
+            <MdDelete
+              onClick={() => removeFromCart(product.product_id, product.count)}
+            />
+          </div>
+          <div
+            className={`${useColorModeValue(
+              "bg-black",
+              "bg-gray-300"
+            )} ${useColorModeValue(
+              "text-white",
+              "text-black"
+            )}  w-[100px] mb-[40px] justify-between p-2 rounded-3xl flex items-center`}
+          >
+            {/* Counter */}
+            <FaMinus onClick={() => removeFromCart(product.product_id, 1)} />
+            <p className="text-xl mx-2 pointer-events-none select-none">
+              {product.count}
+            </p>
+            <FiPlus onClick={() => addMore(product.product_id)} />
+          </div>
         </div>
       </div>
     </div>
