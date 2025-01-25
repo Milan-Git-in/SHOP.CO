@@ -35,7 +35,9 @@ const Header = () => {
   const { products } = useProducts();
   const { colorMode, toggleColorMode } = useColorMode();
   const [searchText, setSearchText] = useState("");
-  const debouncedSearchText = useDebounce(searchText, 1000);
+
+  // Search Text
+  const debouncedSearchText = useDebounce(searchText, 500);
   const [searchItems, setSearchItems] = useState([]);
   useEffect(() => {
     setSearchItems(
@@ -148,10 +150,8 @@ const Header = () => {
         <div className="text-[1rem]">New Arrivals</div>
         <div className="text-[1rem]">Brands</div>
       </div>
-      {/* <div className="searchbar mx-5  min-w-[30vw] px-2 items-center flex  text-gray-500 ">
-        <BiSearch className="text-3xl " />
-        <Input className="w-full  border rounded-full -ml-10 pl-16 max-sm:text-sm" />
-      </div> */}
+
+      {/* Search Bar */}
       <div className="flex flex-col  ">
         <Input
           placeholder={`🔍 Search for Products`}
@@ -166,7 +166,11 @@ const Header = () => {
           <div className="overflow-x-scroll flex flex-col gap-5 max-h-[100px] rounded-xl border">
             {searchItems.length >= 0 &&
               searchItems.map((item) => (
-                <Link to={"/details"} state={{ id: item.id }}>
+                <Link
+                  to={"/details"}
+                  state={{ id: item.id }}
+                  onClick={() => setSearchText("")}
+                >
                   <div className="flex gap-2 border pr-4 max-md:text-sm">
                     <img
                       src={item.image_url}

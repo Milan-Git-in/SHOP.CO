@@ -331,6 +331,32 @@ const Showcase = () => {
                       <div className="mt-[33px]">
                         <hr />
                       </div>
+                      <div className="flex flex-col gap-2 text-xl">
+                        <Link to={"/Showcase"} state={{ style: "CASUAL" }}>
+                          <div className="flex justify-between">
+                            <p>Casaul</p>
+                            <BiRightArrow />
+                          </div>
+                        </Link>
+                        <Link to={"/Showcase"} state={{ style: "FORMAL" }}>
+                          <div className="flex justify-between">
+                            <p>Formal</p>
+                            <BiRightArrow />
+                          </div>
+                        </Link>
+                        <Link to={"/Showcase"} state={{ style: "PARTY" }}>
+                          <div className="flex justify-between">
+                            <p>Party</p>
+                            <BiRightArrow />
+                          </div>
+                        </Link>
+                        <Link to={"/Showcase"} state={{ style: "GYM" }}>
+                          <div className="flex justify-between">
+                            <p>Gym</p>
+                            <BiRightArrow />
+                          </div>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </DrawerBody>

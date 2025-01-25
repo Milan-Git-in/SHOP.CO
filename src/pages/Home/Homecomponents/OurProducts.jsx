@@ -28,7 +28,11 @@ const OurProducts = () => {
           />
         ))}
       </div>
-      <Link to={"/Showcase"} state={{ style: "FORMAL" }}>
+      <Link
+        to={"/Showcase"}
+        state={{ style: "FORMAL" }}
+        className="self-center"
+      >
         <button className="border border-gray-500 rounded-2xl px-2 py-1 text-xl w-[25vw] self-center">
           View All
         </button>

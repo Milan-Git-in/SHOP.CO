@@ -26,14 +26,14 @@ const App = () => {
       {["/", "/product", "/Showcase", "/details", "/Cart"].includes(
         useLocation().pathname
       ) && <Header />}
-      {["/login", "/register"].includes(useLocation().pathname) && <Navbar />}
+      {/* {["/login", "/register"].includes(useLocation().pathname) && <Navbar />} */}
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/register" element={<Register />} /> */}
         <Route path="/" element={<Homepage />} />
         <Route path="/product" element={<Productdetails />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/create" element={<Create />} />
+        {/* <Route path="/dashboard" element={<Dashboard />} />  */}
+        {/* <Route path="/create" element={<Create />} />  */}
         <Route path="/Showcase" element={<Showcase />} />
         <Route path="/details" element={<Productdetails />} />
         <Route path="/Cart" element={<Cart />} />

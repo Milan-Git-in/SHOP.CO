@@ -28,7 +28,11 @@ const NewArrivals = () => {
           />
         ))}
       </div>
-      <Link to={"/Showcase"} state={{ style: "CASUAL" }}>
+      <Link
+        to={"/Showcase"}
+        state={{ style: "CASUAL" }}
+        className="self-center"
+      >
         <button className="border border-gray-500 rounded-2xl px-2 py-1 text-xl w-[25vw] self-center">
           View All
         </button>
